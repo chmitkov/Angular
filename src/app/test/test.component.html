@@ -1,0 +1,37 @@
+<ol>
+    <li>
+        <p>Change color of div</p>
+        <input [(ngModel)]='myColor' placeholder="Enter name of color to" />
+        <div [ngStyle]="{'color': myColor}">Change my color</div>
+    </li>
+    <li>
+        <p>Change stile with StyleClass</p>
+        <button type="submit" (click)="changeStyle()">Change my Style</button>
+        <div [ngStyle]="styleClass">Change style to this div</div>
+    </li>
+    <li>
+        <p>Example of Template reference variable</p>
+        <input type="text" placeholder="Enter some name" (keyup)="0" #name>
+        <p>This is the entered name: {{name.value}}</p>
+    </li>
+    <li>
+        <p>Example of Angular preventing Scripting</p>
+        <p>{{script}}</p>
+        <p>{{myDiv}}</p>
+    </li>
+    <li>
+        <p>Safe navigation operator (?)</p>
+        <p>The item name is: {{nullItem?.name}}</p>
+    </li>
+    <li>
+        <p>Pass variable to Component clas</p>
+        <input type="text" placeholder="Enter your username" (keyup)="0" #username>
+        <button (click)="sayHello(username.value)">Say hello to me</button>
+    </li>
+    <li>
+        <p>Property Binding Example</p>
+        <h1 [innerText]="title"></h1>
+        <input type="text" placeholder="Enter password(123) to enable the button below" (keyup)="enableBtn()" />
+        <button [disabled]="isDisabled">Disabled button</button>
+    </li>
+</ol>

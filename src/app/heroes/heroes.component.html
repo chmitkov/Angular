@@ -1,0 +1,9 @@
+<ul class="heroes" style="border: 2px solid blue">
+    <div *ngIf="selectedHero">
+        <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+    </div>
+    <li *ngFor="let h of heroes" [class.selected]="h === selectedHero" (click)="onSelect(h)">
+        <span class="badge">{{h.id}}</span> {{h.name| lowercase}}
+        <!-- <span class="badge">Hero power </span> {{h.power | exponentialStren в gth}} -->
+    </li>
+</ul>

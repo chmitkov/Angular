@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>My Heroes</h1>
+        <h2>App component html</h2>
+        <div>
+            <h5>{{today |date:'fullDate'}}</h5>
+            <h5>{{today |date:'shortDate'}}</h5>
+            <h5>{{today | date:'h:mm a z' | uppercase}}</h5>
+        </div>
+    </div>
+    <app-heroes></app-heroes>
+    <app-messages></app-messages>
+    <app-test></app-test>
+</body>
+
+</html>
